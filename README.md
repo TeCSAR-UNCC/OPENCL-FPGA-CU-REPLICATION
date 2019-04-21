@@ -1,5 +1,7 @@
 # OPENCL-FPGA-CU_REPLICATION
 
+![Tecsar](/img/tecsarPowerBy.png)
+
 This fork contains 4 parts.
 
 1. OpenCL codes of a subset of Xilinx SDAccel benchmark suite version 2017.4 deployed on the AWS EC2 Cloud Xilinx VU9P FPGA. For the original benchmark page along with datasets and libs, refer [here](https://github.com/Xilinx/SDAccel_Examples/tree/2017.4).
