@@ -178,7 +178,7 @@ int main(int argc, char* argv[])
 
 
   // Define iteration space 
-  size_t globalSize[3] = { work_group, 1, 1 } ;
+  size_t globalSize[3] = { 1, 1, 1 } ;
   size_t localSize[3] = { 1, 1, 1} ;
   cl_event seq_complete ;
    std::cout << "Setting arguments and enqueueing kernel...\n";

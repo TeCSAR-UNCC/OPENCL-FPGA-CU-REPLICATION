@@ -3,19 +3,18 @@ void tinyEncryption(__global const uint2* my_input, __global uint2* my_output,__
     int global_id      = get_global_id(0);         // Picks Work Item global ID
     int global_threads = get_global_size(0);
 
-    int buffer = 8192/global_threads;
+    int buffer = 8192*8;
 
    local uint2 linebufInput[65536] __attribute__((xcl_array_partition(cyclic,8,1)));
    local uint4 linebufKeys[65536]  __attribute__((xcl_array_partition(cyclic,8,1)));
    local uint2 linebufOutput[65536] __attribute__((xcl_array_partition(cyclic,8,1)));
 
   const uint delta=0x9e3779b9;
-  async_work_group_copy(linebufInput, my_input+global_id*buffer, buffer, 0);
-  async_work_group_copy(linebufKeys, my_keys+global_id*buffer, buffer, 0);
-    printf("global_id:%d",global_id);
+  async_work_group_copy(linebufInput, my_input, buffer, 0);
+  async_work_group_copy(linebufKeys, my_keys, buffer, 0);
 
   __attribute__((xcl_pipeline_loop))
-  for(int i=global_id*buffer;i<(global_id+1)*(buffer);i++)
+  for(int i=0;i<8192;i++)
    { printf("\n i val:%d",i);
     for(int k=0;k<8;k++){
     uint v0=linebufInput[8*i+k].x, v1=linebufInput[8*i+k].y, sum=0;

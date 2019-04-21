@@ -22,7 +22,7 @@ XOS=krnl_tiny
 # Tiny Encryption xclbin
 krnl_tiny_XOS=krnl_tiny
 krnl_tiny_NDEVICES=xilinx:vcu1525:dynamic xilinx_vcu1525_dynamic_5_0
-krnl_tiny_LDCLFLAGS = --nk tinyEncryption:2
+krnl_tiny_LDCLFLAGS = --nk tinyEncryption:1
 
 XCLBINS=krnl_tiny
 
