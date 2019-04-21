@@ -1,6 +1,6 @@
 # OPENCL-FPGA-CU_REPLICATION
 
-![alt text](https://github.com/TeCSAR-UNCC/OPENCL-FPGA-CU-REPLICATION/tree/master/img/tecsarPowerBy.png)
+![Tecsar](/img/tecsarPowerBy.png)
 
 This fork contains 4 parts.
 
