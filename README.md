@@ -1,4 +1,4 @@
-# OPENCL-FPGA-CU_REPLICATION
+# OPENCL-FPGA-CU-REPLICATION
 
 ![Tecsar](/img/tecsarPowerBy.png)
 
